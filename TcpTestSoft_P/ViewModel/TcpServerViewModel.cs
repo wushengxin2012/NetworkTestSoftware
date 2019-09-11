@@ -67,7 +67,14 @@ namespace TcpTestSoft_P.ViewModel
             }
             else
             {
-                TcpServerModelInstance.AddServerState("服务器 已存在");
+                if (!TcpServerInstance.ServerSocket.Connected)
+                {
+                    await Task.Run(() => TcpServerInstance.StartTcpServer(TcpServerModelInstance));
+                }
+                else
+                {
+                    TcpServerModelInstance.AddServerState("服务器 已存在");
+                }
             }
         }
         private bool StartUpCmdCanExecute()
@@ -177,6 +184,36 @@ namespace TcpTestSoft_P.ViewModel
                 {
                     return false;
                 }
+            }
+        }
+
+
+        private RelayCommand _closeTcpServerCmd;
+        public RelayCommand CloseTcpServerCmd
+        {
+            get
+            {
+                if(_closeTcpServerCmd == null)
+                {
+                    _closeTcpServerCmd = new RelayCommand(() => CloseTcpServer(), CloseTcpServerCmdCanExecute);
+                }
+                return _closeTcpServerCmd;
+            }
+        }
+        private void CloseTcpServer()
+        {
+            TcpServerInstance.CloseTcpServer();
+            TcpServerModelInstance.AddServerState("服务器关闭成功");
+        }
+        private bool CloseTcpServerCmdCanExecute()
+        {
+            if( TcpServerInstance.ServerSocket != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }

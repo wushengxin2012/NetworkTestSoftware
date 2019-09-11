@@ -1,4 +1,6 @@
 D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\bin\Debug\TcpTestSoft_P.exe.config
+D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\bin\Debug\TcpTestSoft_P.exe.manifest
+D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\bin\Debug\TcpTestSoft_P.application
 D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\bin\Debug\TcpTestSoft_P.exe
 D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\bin\Debug\TcpTestSoft_P.pdb
 D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\bin\Debug\ControlzEx.dll
@@ -46,6 +48,8 @@ D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\obj\Debug\TcpTestSo
 D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\obj\Debug\TcpTestSoft_P.Properties.Resources.resources
 D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\obj\Debug\TcpTestSoft_P.csproj.GenerateResource.cache
 D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\obj\Debug\TcpTestSoft_P.csproj.CoreCompileInputs.cache
+D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\obj\Debug\TcpTestSoft_P.exe.manifest
+D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\obj\Debug\TcpTestSoft_P.application
 D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\obj\Debug\TcpTestSoft_P.csproj.CopyComplete
 D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\obj\Debug\TcpTestSoft_P.exe
 D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\obj\Debug\TcpTestSoft_P.pdb

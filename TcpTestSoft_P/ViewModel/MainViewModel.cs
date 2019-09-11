@@ -38,8 +38,8 @@ namespace TcpTestSoft_P.ViewModel
             {
                 new Model.ViewItem(){Name = "Tcp 服务器", View = new View.TcpServerView()},
                 new Model.ViewItem(){Name = "Tcp 客户端", View = new View.TcpClientView()},
-                new Model.ViewItem(){Name = "Udp 服务器", View = new View.UdpServerView()},
-                new Model.ViewItem(){Name = "Udp 客户端", View = new View.UdpClientView()}
+                //new Model.ViewItem(){Name = "Udp 服务器", View = new View.UdpServerView()},
+                //new Model.ViewItem(){Name = "Udp 客户端", View = new View.UdpClientView()}
             };
         }
 

@@ -41,6 +41,10 @@ namespace TcpTestSoft_P.TcpPart
                 while (true)
                 {
                     rece = Client.Receive(data);
+                    if (rece == 0)
+                    {
+                        throw new Exception("Server Stop");
+                    }
                     model.AddReceiveAndSendMessage("接收 -->> " + Encoding.UTF8.GetString(data, 0, rece));
                 }
 

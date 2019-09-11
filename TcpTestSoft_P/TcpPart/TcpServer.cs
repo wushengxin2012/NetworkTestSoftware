@@ -43,7 +43,15 @@ namespace TcpTestSoft_P.TcpPart
 
             while (true)
             {
-                Client = ServerSocket.Accept();
+                try
+                {
+                    Client = ServerSocket.Accept();
+                }
+                catch
+                {
+                    serverModel.AddServerState("服务器 等待链接异常，尝试关闭服务器");
+                    return;
+                }
                 IPEndPoint clientEndPoint = (IPEndPoint)Client.RemoteEndPoint;
                 serverModel.AddServerState("连接 到 客户端");
                 serverModel.RemoteEndPoint = string.Format("{0}:{1}", clientEndPoint.Address, clientEndPoint.Port);
@@ -60,12 +68,18 @@ namespace TcpTestSoft_P.TcpPart
                     catch (SocketException)
                     {
                         serverModel.AddServerState("接收数据出错，尝试关闭服务器");
-                        Client?.Shutdown(SocketShutdown.Both);
-                        Client?.Close();
-                        ServerSocket?.Close();
+                        if(Client != null && Client.Connected)
+                        {
+                            Client?.Shutdown(SocketShutdown.Both);
+                            Client?.Close();
+                        }
+                        if(ServerSocket != null && ServerSocket.Connected)
+                        {
+                            ServerSocket?.Close();
+                        }
                         return;
                     }
-                    if(rece == 0)
+                    if (rece == 0)
                     {
                         serverModel.AddServerState("客户端 请求关闭，失去连接");
                         serverModel.AddServerState("服务器 等待 新TCP客户端");
@@ -73,7 +87,7 @@ namespace TcpTestSoft_P.TcpPart
                     }
 
                     receiveString = Encoding.UTF8.GetString(data, 0, rece);
-                    serverModel.AddReceiveAndSendData("接收 -->> "+receiveString);
+                    serverModel.AddReceiveAndSendData("接收 -->> " + receiveString);
                 }
                 Client?.Shutdown(SocketShutdown.Both);
                 Client?.Close();
@@ -83,7 +97,7 @@ namespace TcpTestSoft_P.TcpPart
 
         public void SendBack(string sendedData)
         {
-            if(Client.Connected)
+            if (Client.Connected)
             {
                 Client.Send(Encoding.UTF8.GetBytes(sendedData));
                 ServerModel.AddReceiveAndSendData("发送 -->> " + sendedData);
@@ -91,6 +105,20 @@ namespace TcpTestSoft_P.TcpPart
             else
             {
                 ServerModel.AddServerState("客户端 已关闭");
+            }
+        }
+
+        public void CloseTcpServer()
+        {
+            if (Client != null)
+            {
+                Client?.Shutdown(SocketShutdown.Both);
+                Client?.Close();
+            }
+
+            if (ServerSocket != null)
+            {
+                ServerSocket?.Close();
             }
         }
     }

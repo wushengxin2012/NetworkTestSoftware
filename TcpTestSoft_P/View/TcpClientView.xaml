@@ -25,9 +25,9 @@
         <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Column="0" Grid.Row="1" Margin="4">
             <StackPanel Margin="4">
                 <Label Content="远程服务器端口：" Margin="4"/>
-                <TextBox Height="23" Text="{Binding TcpClientModelInstance.RemotePort}" Margin="4,0,0,0"/>
+                <TextBox Height="23" Text="{Binding TcpClientModelInstance.RemotePort, UpdateSourceTrigger=PropertyChanged}" Margin="4,0,0,0"/>
                 <Label Content="远程服务器地址：" Margin="4" />
-                <TextBox Height="23" Text="{Binding TcpClientModelInstance.RemoteAddress}" Margin="4,0,0,0"/>
+                <TextBox Height="23" Text="{Binding TcpClientModelInstance.RemoteAddress, UpdateSourceTrigger=PropertyChanged}" Margin="4,0,0,0"/>
             </StackPanel>
         </ScrollViewer>
         
@@ -37,16 +37,16 @@
         <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1" Grid.Column="1" Margin="4">
             <StackPanel Margin="4">
                 <Label Content="发送的数据：" Margin="4"></Label>
-                <TextBox Height="23" Text="{Binding TcpClientModelInstance.SendMessage}" Margin="4,0,0,0"/>
+                <TextBox Height="23" Text="{Binding TcpClientModelInstance.SendMessage, UpdateSourceTrigger=PropertyChanged}" Margin="4,0,0,0"/>
                 <Label Content="客户端状态：" Margin="4"></Label>
-                <TextBlock Text="{Binding TcpClientModelInstance.ClientState}" Margin="4,0,0,0"/>
+                <TextBlock Text="{Binding TcpClientModelInstance.ClientState, UpdateSourceTrigger=PropertyChanged}" Margin="4,0,0,0"/>
             </StackPanel>
         </ScrollViewer>
         
         <!-- 底部 接收发送数据-->
         <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="4">
             <StackPanel>
-                <Label Content="接收 / 发送 的数据：" Margin="4,0,0,0"/>
+                <Label Content="接收 / 发送 的数据：" BorderThickness="0,0,0,3" BorderBrush="{DynamicResource AccentColorBrush}" Margin="4,0,0,0"/>
                 <TextBlock Margin="4" Text="{Binding TcpClientModelInstance.ReceiveAndSendData}"/>
             </StackPanel>
         </ScrollViewer>
