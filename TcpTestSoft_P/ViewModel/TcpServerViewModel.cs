@@ -104,7 +104,7 @@ namespace TcpTestSoft_P.ViewModel
         }
         private bool SendDataCmdCanExecute()
         {
-            if (TcpServerModelInstance.SendedMessage != null)
+            if (TcpServerInstance.Client != null && TcpServerInstance.Client.Connected && TcpServerModelInstance.SendedMessage != null)
             {
                 return true;
             }

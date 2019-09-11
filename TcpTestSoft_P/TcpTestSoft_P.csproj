@@ -88,10 +88,13 @@
     <Compile Include="Helper\DocumentLink.xaml.cs">
       <DependentUpon>DocumentLink.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\TcpClientModel.cs" />
     <Compile Include="Model\TcpServerModel.cs" />
     <Compile Include="Model\ViewItem.cs" />
+    <Compile Include="TcpPart\TcpClient.cs" />
     <Compile Include="TcpPart\TcpServer.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\TcpClientViewModel.cs" />
     <Compile Include="ViewModel\TcpServerViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="View\TcpClientView.xaml.cs">

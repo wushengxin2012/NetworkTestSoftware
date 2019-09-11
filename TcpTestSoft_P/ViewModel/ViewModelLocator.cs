@@ -45,6 +45,7 @@ namespace TcpTestSoft_P.ViewModel
             // зЂВс ViewModel
             SimpleIoc.Default.Register<MainViewModel>();
             SimpleIoc.Default.Register<TcpServerViewModel>();
+            SimpleIoc.Default.Register<TcpClientViewModel>();
         }
 
         /// <summary>
@@ -66,6 +67,14 @@ namespace TcpTestSoft_P.ViewModel
             }
         }
         
+        public TcpClientViewModel TcpClientViewModelInstance
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<TcpClientViewModel>();
+            }
+        }
+
         public static void Cleanup()
         {
             // TODO Clear the ViewModels

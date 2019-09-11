@@ -10,11 +10,11 @@ none
 false
 TRACE
 D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\App.xaml
-11151548125
+6-2076650649
 
-8-48985541
-1241100107338
-MainWindow.xaml;
+20-1632083916
+127-681144418
+Helper\DocumentLink.xaml;MainWindow.xaml;View\TcpClientView.xaml;View\TcpServerView.xaml;View\UdpClientView.xaml;View\UdpServerView.xaml;
 
 True
 

@@ -30,7 +30,8 @@ namespace TcpTestSoft_P.TcpPart
             }
             catch (Exception)
             {
-                serverModel.AddServerState("端口转换错误");
+                serverModel.AddServerState("端口转换错误，关闭服务器");
+                return;
             }
 
             // 开始建立服务器
@@ -72,7 +73,7 @@ namespace TcpTestSoft_P.TcpPart
                     }
 
                     receiveString = Encoding.UTF8.GetString(data, 0, rece);
-                    serverModel.AddReceiveAndSendData("接收 -> "+receiveString);
+                    serverModel.AddReceiveAndSendData("接收 -->> "+receiveString);
                 }
                 Client?.Shutdown(SocketShutdown.Both);
                 Client?.Close();
@@ -85,7 +86,7 @@ namespace TcpTestSoft_P.TcpPart
             if(Client.Connected)
             {
                 Client.Send(Encoding.UTF8.GetBytes(sendedData));
-                ServerModel.AddReceiveAndSendData("发送 -> " + sendedData);
+                ServerModel.AddReceiveAndSendData("发送 -->> " + sendedData);
             }
             else
             {

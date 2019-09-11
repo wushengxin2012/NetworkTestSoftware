@@ -24,5 +24,18 @@ namespace TcpTestSoft_P.View
         {
             InitializeComponent();
         }
+
+        //private void Connect_Click(object sender, RoutedEventArgs e)
+        //{
+        //    ViewModel.ViewModelLocator locator = (ViewModel.ViewModelLocator)Application.Current.Resources["Locator"];
+        //    ViewModel.TcpClientViewModel viewModel = locator.TcpClientViewModelInstance;
+        //    Model.TcpClientModel model = viewModel.TcpClientModelInstance;
+        //    model.ClientState = "it is connection";
+        //    model.SendMessage = " receving data ...";
+        //    model.RemoteAddress = "127.0.0.4";
+        //    model.RemotePort = "125";
+        //    model.ReceiveAndSendData = "rece --> \n send ---> ";
+
+        //}
     }
 }
