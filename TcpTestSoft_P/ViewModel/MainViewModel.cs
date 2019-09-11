@@ -1,5 +1,7 @@
 using GalaSoft.MvvmLight;
 
+using System.Collections.Generic;
+
 namespace TcpTestSoft_P.ViewModel
 {
     /// <summary>
@@ -29,6 +31,23 @@ namespace TcpTestSoft_P.ViewModel
             ////{
             ////    // Code runs "for real"
             ////}
+
+            // -------- test --------
+            // -------- test --------
+            ViewList = new List<Model.ViewItem>()
+            {
+                new Model.ViewItem(){Name = "Tcp 服务器", View = new View.TcpServerView()},
+                new Model.ViewItem(){Name = "Tcp 客户端", View = new View.TcpClientView()},
+                new Model.ViewItem(){Name = "Udp 服务器", View = new View.UdpServerView()},
+                new Model.ViewItem(){Name = "Udp 客户端", View = new View.UdpClientView()}
+            };
+        }
+
+        private List<Model.ViewItem> _viewList;
+        public List<Model.ViewItem> ViewList
+        {
+            get { return _viewList; }
+            set { _viewList = value; RaisePropertyChanged(() => ViewList); }
         }
     }
 }

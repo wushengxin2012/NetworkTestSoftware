@@ -13,23 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-using MahApps.Metro.Controls;
-
-namespace TcpTestSoft_P
+namespace TcpTestSoft_P.Helper
 {
     /// <summary>
-    /// MainWindow.xaml 的交互逻辑
+    /// DocumentLink.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : MetroWindow
+    public partial class DocumentLink : UserControl
     {
-        public MainWindow()
+        public DocumentLink()
         {
             InitializeComponent();
-        }
-
-        private void ViewListBox_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            MenuToggleButton.IsChecked = false;
         }
     }
 }

@@ -7,11 +7,14 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
+        xmlns:view="clr-namespace:TcpTestSoft_P.View"
+        xmlns:helper="clr-namespace:TcpTestSoft_P.Helper"
         mc:Ignorable="d"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         Background="{DynamicResource MaterialDesignPaper}"
         GlowBrush="{DynamicResource AccentColorBrush}" BorderThickness="1"
         WindowStartupLocation="CenterScreen"
+        DataContext="{Binding Source={StaticResource Locator},Path=Main}"
         Title="MainWindow" Height="450" Width="800">
     
     <!-- Windows 资源 -->
@@ -41,12 +44,20 @@
                                   IsChecked="{Binding IsChecked, ElementName=MenuToggleButton, Mode=TwoWay}"/>
                     <!-- 隐藏区内容2 内容-->
                     <Grid>
-                        <TextBlock Text="Some Text" HorizontalAlignment="Center"></TextBlock>
-                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <materialDesign:PackIcon Kind="HumanHandsup" Width="64" Height="64" Margin="16"/>
-                            <materialDesign:PackIcon Kind="Heart" Width="64" Height="64" Margin="16"/>
-                            <materialDesign:PackIcon Kind="Windows" Width="64" Height="64" Margin="16"/>
-                        </StackPanel>
+                        <TextBlock Text="项 目" HorizontalAlignment="Center"></TextBlock>
+                        <ListBox x:Name="viewListBox" Margin="16" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                 SelectedIndex="0" ItemsSource="{Binding ViewList}"
+                                 PreviewMouseLeftButtonUp="ViewListBox_PreviewMouseLeftButtonUp">
+                            
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <materialDesign:PackIcon Kind="AccessPointNetwork" Margin="16"/>
+                                        <TextBlock Text="{Binding Name}" Margin="16"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
                     </Grid>
                 </DockPanel>
             </materialDesign:DrawerHost.LeftDrawerContent>
@@ -62,9 +73,9 @@
                         </StackPanel>
                     </DockPanel>
                 </materialDesign:ColorZone>
-                <!-- 主面板内容2 主要内容-->
+                <!-- 主面板内容2 主要内容 -->
                 <DockPanel>
-                    
+                    <helper:DocumentLink Content="{Binding ElementName=viewListBox, Path=SelectedItem.View}"/>
                 </DockPanel>
             </DockPanel>
         </materialDesign:DrawerHost>

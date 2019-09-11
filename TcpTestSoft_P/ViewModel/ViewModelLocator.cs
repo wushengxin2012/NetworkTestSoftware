@@ -42,14 +42,27 @@ namespace TcpTestSoft_P.ViewModel
             ////    SimpleIoc.Default.Register<IDataService, DataService>();
             ////}
 
+            // ×¢²á ViewModel
             SimpleIoc.Default.Register<MainViewModel>();
+            SimpleIoc.Default.Register<TcpServerViewModel>();
         }
 
+        /// <summary>
+        /// ÊµÀý»¯ ViewModel
+        /// </summary>
         public MainViewModel Main
         {
             get
             {
                 return ServiceLocator.Current.GetInstance<MainViewModel>();
+            }
+        }
+
+        public TcpServerViewModel TcpServerViewModelInstance
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<TcpServerViewModel>();
             }
         }
         
