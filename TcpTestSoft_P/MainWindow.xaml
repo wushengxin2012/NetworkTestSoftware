@@ -15,7 +15,7 @@
         GlowBrush="{DynamicResource AccentColorBrush}" BorderThickness="1"
         WindowStartupLocation="CenterScreen"
         DataContext="{Binding Source={StaticResource Locator},Path=Main}"
-        Title="MainWindow" Height="450" Width="800">
+        Title="网络测试助手" Height="450" Width="800">
     
     <!-- Windows 资源 -->
     <metro:MetroWindow.Resources>
@@ -69,7 +69,7 @@
                     <DockPanel>
                         <StackPanel Orientation="Horizontal" materialDesign:RippleAssist.IsCentered="True">
                             <ToggleButton x:Name="MenuToggleButton" Style="{DynamicResource MaterialDesignHamburgerToggleButton}"/>
-                            <Label Content="网络测试" VerticalAlignment="Center" FontSize="{DynamicResource {x:Static SystemParameters.CaptionHeightKey}}"/>
+                            <Label Content="{Binding ElementName=viewListBox, Path=SelectedItem.Name}" VerticalAlignment="Center" FontSize="{DynamicResource {x:Static SystemParameters.CaptionHeightKey}}"/>
                         </StackPanel>
                     </DockPanel>
                 </materialDesign:ColorZone>

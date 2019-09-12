@@ -53,3 +53,4 @@ D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\obj\Debug\TcpTestSo
 D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\obj\Debug\TcpTestSoft_P.csproj.CopyComplete
 D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\obj\Debug\TcpTestSoft_P.exe
 D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\obj\Debug\TcpTestSoft_P.pdb
+D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\obj\Debug\TcpTestSoft_P.csprojAssemblyReference.cache
