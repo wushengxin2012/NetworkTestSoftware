@@ -64,7 +64,7 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>network_128px_1218062_easyicon.net.ico</ApplicationIcon>
+    <ApplicationIcon>network_128px_1163372_easyicon.net.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
@@ -216,6 +216,18 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="network_128px_1218062_easyicon.net.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="networking_128px_1202685_easyicon.net.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Network_128px_1120237_easyicon.net.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="network_128px_1221453_easyicon.net.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="network_128px_1163372_easyicon.net.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

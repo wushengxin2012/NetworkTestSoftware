@@ -27,6 +27,7 @@ D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\bin\Debug\MaterialD
 D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\bin\Debug\MaterialDesignThemes.Wpf.xml
 D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
 D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\obj\Debug\TcpTestSoft_P.csprojAssemblyReference.cache
 D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\obj\Debug\Helper\DocumentLink.g.cs
 D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\obj\Debug\MainWindow.g.cs
 D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\obj\Debug\View\TcpClientView.g.cs
@@ -53,4 +54,3 @@ D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\obj\Debug\TcpTestSo
 D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\obj\Debug\TcpTestSoft_P.csproj.CopyComplete
 D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\obj\Debug\TcpTestSoft_P.exe
 D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\obj\Debug\TcpTestSoft_P.pdb
-D:\MyWorks\C#\TcpTestWpfSoftware\TcpTestSoft_s\TcpTestSoft_P\obj\Debug\TcpTestSoft_P.csprojAssemblyReference.cache

@@ -34,12 +34,20 @@ namespace TcpTestSoft_P.TcpPart
                 return;
             }
 
-            // 开始建立服务器
-            IPEndPoint serverEndPoint = new IPEndPoint(IPAddress.Any, port);
-            ServerSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            ServerSocket.Bind(serverEndPoint);
-            ServerSocket.Listen(5);
-            serverModel.AddServerState("建立服务器 成功，等待 TCP 客户端连接");
+            try
+            {
+                // 开始建立服务器
+                IPEndPoint serverEndPoint = new IPEndPoint(IPAddress.Any, port);
+                ServerSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                ServerSocket.Bind(serverEndPoint);
+                ServerSocket.Listen(5);
+                serverModel.AddServerState("建立服务器 成功，等待 TCP 客户端连接");
+            }
+            catch (Exception)
+            {
+                serverModel.AddServerState("建立服务器 失败，可能是因为端口被占用");
+                return;
+            }
 
             while (true)
             {

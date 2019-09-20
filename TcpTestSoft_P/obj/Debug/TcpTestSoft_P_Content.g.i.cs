@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("network_128px_1218062_easyicon.net.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("network_128px_1163372_easyicon.net.ico")]
 
 
